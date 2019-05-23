@@ -1,5 +1,6 @@
 ---
 title: "Post: The Two Pillars of JavaScript — Pt 2: Functional Programming"
+date: 2019-05-24T04:00:00:00+09:00
 categories:
   - Blog
 tags:
