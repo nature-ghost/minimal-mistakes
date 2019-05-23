@@ -24,7 +24,7 @@ JavaScript works in a somewhat similar fashion. Prototypes can be thought of as 
 
 When a new object is created, it is created using that blueprint. If you want to find the the blueprint from which a new object inherits, you can find it is its ```__proto__``` property.
 
-```$xslt
+```
 var obj = new Object();
 obj.__proto__
 
@@ -41,7 +41,7 @@ Each object in JavaScript has a ```__proto__``` property, or prototype chain, th
 ###Constructors
 Constructor functions are one of the most common methods for creating objects that you will see in the wild. They are the more classical approach to OOP, using "classes" (Constructors) to define a group of objects. Constructors will have a structure similar to this:
 
-```$xslt
+```
 funciton Persion(first, last) {
   this.firstName = first;
   this.lastName = last;
@@ -67,7 +67,7 @@ In other words, you can rewrite,
 
 to this:
 
-```$xslt
+```
 var sunny = {
   firstName: 'Sunny',
   lastName: 'Beatteay',
@@ -82,7 +82,7 @@ var sunny = {
 
 In regards to prototypal inheritance, ```sunny``` is an instance of a ```Person``` object and ```Person``` is now in the prototype chain for ```sunny```.
 
-```$xslt
+```
   sunny instanceof Person           // true
   sunny.__proto__                   // Object {constructor: functon...}
   sunny.__proto__ === Person.prototype    // true
@@ -114,6 +114,3 @@ In regards to prototypal inheritance, ```sunny``` is an instance of a ```Person`
 
 
 
-
-
-d
