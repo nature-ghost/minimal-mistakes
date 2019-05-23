@@ -1,15 +1,12 @@
 ---
-title: "post: JavaScript Prototypal Inheritance: Constructors vs. OLOO"
-date: 2019-05-24T01:45:02-05:00
+title: "Post: JavaScript Prototypal Inheritance: Constructors vs. OLOO"
 categories:
   - Blog
 tags:
-  - javascript
+  - Javascript
   - OLOO
   - Prototypal
- link: https://medium.com/predict/javascript-prototypal-inheritance-constructors-vs-oloo-d90c482aaa55
 ---
-
 
 One of the first things you learn about when you study JavaScript Object Oriented Programming is Prototypal Inheritance. It can be a confusing subject to learn, especially if you're accustomed to other object oriented languages. In this piece, I'm going to focus on constructors and "Object Linking to Other Objects"(OLOO) prototypal inheritance and how each works behind the scenes.
 
@@ -23,7 +20,5 @@ JavaScript works in a somewhat similar fashion. Prototypes can be thought of as 
 
 ![Think of JavaScript Prototypes as blueprints](/assets/images/1_think_of_javascript_protypes_as_blueprints.jpeg){:class="img-responsive"}
 
-<img src="{{site.url}}{{site.baseurl}}/assets/images/1_think_of_javascript_protypes_as_blueprints.jpeg"
+<img src="{{site.url}}{{site.baseurl}}/assets/images/1_think_of_javascript_protypes_as_blueprints.jpeg">
 
-
-![test](http://gjchoi.github.io/favicon.png)
