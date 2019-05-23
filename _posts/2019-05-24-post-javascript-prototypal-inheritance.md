@@ -2,7 +2,7 @@
 title: "Post: JavaScript Prototypal Inheritance: Constructors vs. OLOO"
 date: 2019-05-24T01:00:00:00+09:00
 categories:
-  - Blog
+  - Study
 tags:
   - Javascript
   - OLOO
