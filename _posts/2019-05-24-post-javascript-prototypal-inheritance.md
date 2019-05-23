@@ -18,7 +18,7 @@ While prototypal inheritance is unique to JavaScript, it is not so special that 
 JavaScript works in a somewhat similar fashion. Prototypes can be thought of as blueprints that detail the properties and behaviors any descendent object will inherit.
 
 
-![Think of JavaScript Prototypes as blueprints](/assets/images/1_think_of_javascript_protypes_as_blueprints.jpeg){:class="img-responsive"}
+![Think of JavaScript Prototypes as blueprints]({{site.url}}{{site.baseurl}}/assets/images/1_think_of_javascript_protypes_as_blueprints.jpeg){:class="img-responsive"}
 
 <img src="{{site.url}}{{site.baseurl}}/assets/images/1_think_of_javascript_protypes_as_blueprints.jpeg">
 
