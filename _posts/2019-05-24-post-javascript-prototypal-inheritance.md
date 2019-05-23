@@ -39,6 +39,7 @@ __lookupSetter__: function,,,}
 Each object in JavaScript has a ```__proto__``` property, or prototype chain, that the program uses to look up any methods that are called on that object. Similar to Ruby, if a method is called on an object in JavaScript, the program will first look to the object to see if it has that method. If it doesn't, it will look up into it's ```__proto__``` property to see if it is there.
 
 ###Constructors
+
 Constructor functions are one of the most common methods for creating objects that you will see in the wild. They are the more classical approach to OOP, using "classes" (Constructors) to define a group of objects. Constructors will have a structure similar to this:
 
 ```
