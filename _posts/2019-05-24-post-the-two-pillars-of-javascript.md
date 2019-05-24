@@ -7,4 +7,6 @@ tags:
   - Javascript
   - pillars
 link: https://medium.com/javascript-scene/the-two-pillars-of-javascript-ee6f3281e7f3
+header:
+  teaser: assets/images/bio-photo.jpg
 ---

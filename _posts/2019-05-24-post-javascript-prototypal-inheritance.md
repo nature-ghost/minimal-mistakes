@@ -8,6 +8,14 @@ tags:
   - OLOO
   - Prototypal
 link: https://medium.com/predict/javascript-prototypal-inheritance-constructors-vs-oloo-d90c482aaa55
+excerpt: "What do “new” and “Object.create” do?"
+header:
+  overlay_image: https://mmistakes.github.io/minimal-mistakes/assets/images/unsplash-image-1.jpg
+  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+  actions:
+    - label: "More Info"
+      url: "https://unsplash.com"
 ---
 
 One of the first things you learn about when you study JavaScript Object Oriented Programming is Prototypal Inheritance. It can be a confusing subject to learn, especially if you're accustomed to other object oriented languages. In this piece, I'm going to focus on constructors and "Object Linking to Other Objects"(OLOO) prototypal inheritance and how each works behind the scenes.
