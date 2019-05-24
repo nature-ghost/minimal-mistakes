@@ -9,10 +9,10 @@ tags:
   - Prototype Chain
   - Prototyping
   - Programming
-link: https://medium.com/predict/javascript-prototypal-inheritance-constructors-vs-oloo-d90c482aaa55
 excerpt: "What do “new” and “Object.create” do?"
 header:
   overlay_image: https://mmistakes.github.io/minimal-mistakes/assets/images/unsplash-image-1.jpg
+  teaser: https://mmistakes.github.io/minimal-mistakes/assets/images/unsplash-image-1.jpg
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
   caption: "Photo credit: [**minimal-mistakes**]"
   actions:

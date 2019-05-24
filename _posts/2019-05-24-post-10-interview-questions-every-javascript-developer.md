@@ -5,8 +5,17 @@ categories:
   - Study 
 tags:
   - Javascript
-  - interview
-  - Questions
-  - Developer
-link: https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95
+  - Functional Programming
+  - Development 
+  - Technology
+  
+excerpt: "AKA: The Keys to JavaScript Mastery"
+header:
+  overlay_image: assets/images/2_10_interview_questions.jpeg
+  teaser: assets/images/2_10_interview_questions.jpeg
+  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+  caption: "Photo credit: [**Eric Elliott**]"
+  actions:
+    - label: "More Info"
+      url: "https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95"
 ---
