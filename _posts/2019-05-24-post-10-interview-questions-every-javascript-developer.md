@@ -19,3 +19,7 @@ header:
     - label: "More Info"
       url: "https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95"
 ---
+
+At most companies, management must trust the developers to give technical interviews in order to assess candidate skills. If you do well as a candidate, you'll eventually need to interview. Here's how.
+
+---
