@@ -62,3 +62,20 @@ Hear are some questions that will help you explore the stuff that really matters
 
 ### **1. Can you name two programming paradigms important for JavaScript app developers?**
 
+JavaScript is a multi-paradigm language, supporting **imperative/procedural** programming along with **OOP** (Object-Oriented Programming) and **functional programming**. JavaScript supports OOP with **prototypal inheritance**.
+
+#### Good to hear:
+
+* Prototypal Inheritance (alsl: prototypes, OLOO).
+
+* Functional programming (also: closures, first class functions, lambdas).
+
+#### Red flags:
+
+* No clue what a paradigm is, no mention of prototypal oo or functional programming.
+
+#### Learn More:
+
+* ["The Two Pillars of JavaScript Part 1]("{% post_url 2019-05-24-post-the-two-pillars-of-javascript-part2 %}") -- Prototypal OO.
+
+* ["The Two Pillars of JavaScript Part 2]("{% post_url 2019-05-24-post-the-two-pillars-of-javascript %}") -- Functional Programming. 
