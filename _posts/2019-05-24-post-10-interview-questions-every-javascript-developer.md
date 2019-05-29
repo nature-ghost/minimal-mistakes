@@ -80,13 +80,15 @@ JavaScript is a multi-paradigm language, supporting **imperative/procedural** pr
 * ["The Two Pillars of JavaScript Part 1]({{ site.baseurl }}{% link _posts/2019-05-24-post-the-two-pillars-of-javascript.md %}) -- Prototypal OO.
 
 * ["The Two Pillars of JavaScript Part 2]({{site.baseurl }}{% link _posts/2019-05-24-post-the-two-pillars-of-javascript-part2.md %}) -- Functional Programming.
+ 
 
- ### **2. What is functional programming?**
+###  **2. What is functional programming?**
+ 
  Functional programming produces programs by composing mathematical functions and avoids shared state & mutable data. Lisp (specified in 1958) was among the first languages to support functional programming, and was heavily inspired by lambda calculus. Lisp and many Lisp family languages are still in common use today.
  
  Functional programming is an essential concept in JavaScript (one of the two pillars of JavaScript). Several common functional utilities were added to JavaScript in ES5.
  
- #### Good to hear:
+#### Good to hear:
  
  * Pure functions / function purity.
  
@@ -98,7 +100,7 @@ JavaScript is a multi-paradigm language, supporting **imperative/procedural** pr
  
  * Menthion of features that support FP: first-class functions, higher order functions, functions as arguments/values.
  
- #### Red flags:
+#### Red flags:
  
  * No mention of pure functions / avoiding side-effects
  
@@ -106,7 +108,7 @@ JavaScript is a multi-paradigm language, supporting **imperative/procedural** pr
  
  * Unable to identify the features of JavaScript that enable FP.
  
- #### Learn More:
+#### Learn More:
  
  * [The Two Pillars of JavaScript Part 2]({{site.baseurl }}{% link _posts/2019-05-24-post-the-two-pillars-of-javascript-part2.md %})
  
@@ -116,7 +118,7 @@ JavaScript is a multi-paradigm language, supporting **imperative/procedural** pr
  
  * [The Haskell School of Music.](http://haskell.cs.yale.edu/wp-content/uploads/2015/03/HSoM.pdf)
  
- ### **3. What is the difference between classical inheritance and prototypal inheritance?**
+### **3. What is the difference between classical inheritance and prototypal inheritance?**
  
  **Class Inheritance:** instances inherit from classes (like a blueprint -- a description of the class), and create sub-class relationships: hierarchical class taxonomies. Instances are typically instanctiated via constructor functions with the *\`new\`* keyword. Class inheritance may or may not use the *\`class\`* keyword from ES6.
  
@@ -125,7 +127,7 @@ JavaScript is a multi-paradigm language, supporting **imperative/procedural** pr
  
  ---
  
- ### *In JavaScript, prototypal inheritance is simpler & more flexible than class inheritance.*
+### *In JavaScript, prototypal inheritance is simpler & more flexible than class inheritance.*
  
  ---
  
@@ -148,7 +150,7 @@ JavaScript is a multi-paradigm language, supporting **imperative/procedural** pr
 
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/69255635" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 
-### *4.What are the pros and cons of functional programming vs object-oriented programming?*
+### *4. What are the pros and cons of functional programming vs object-oriented programming?*
 
 **OOP Pros:** It's easy to understand the basic concept of objects and easy to interpret the meaning of method calls. OOP tends to use an imperative style rather than a declarative style, which reads like a straight-forward set of instructions for the computer to follow.
 
@@ -166,7 +168,7 @@ Computation that makes use of pure functions is also easy to scale across multip
  
  FP has a much steeper learning curve than OOP because the broad popularity of OOP has allowed the language and learning materials of OOP to become more conversational, whereas the languages of FP tends to be much more academic and formal. FP concepts are frequently written about using idioms and notations from lambda calculus, algebras, and category theory, all of which requires a prior knowledge foundation in those domains to be understood.
  
- #### Good to hear:
+#### Good to hear:
  
  * Mentions of trouble with shared state, different things competing for the same resources, etc...
  
@@ -182,10 +184,47 @@ Computation that makes use of pure functions is also easy to scale across multip
  
  * Awareness that immutability gives rise to an extremely accessible and malleable program state history, allowing for the easy addition of features like infinite undo/redo, rewind/replay, time-travel debugging, and so on. Immutability can be achieved in either paradigm, but a proliferation of shared stateful objects complicates the implementation in OOP.
  
- #### Red flags:
+#### Red flags:
  
  * Unable to list disadvantages of one style of another -- Anybody experienced with either style should have bumped up against some of the limitations.
  
- #### Learn More:
+#### Learn More:
  
- *  
+ * [The Two Pillars of JavaScript Part 1]({{ site.baseurl }}{% link _posts/2019-05-24-post-the-two-pillars-of-javascript.md %}) -- Prototypal OO.
+ 
+ * ["The Two Pillars of JavaScript Part 2]({{site.baseurl }}{% link _posts/2019-05-24-post-the-two-pillars-of-javascript-part2.md %}) -- Functional Programming.
+  
+### **5. When is classical inheritance an appropriate choice?**
+
+The answer is never, or almost never. Certainly never more than one level. Multi-level class hierarchies are an anti-pattern. I've been issuing this challenge for years, and the only answers I've ever heard fall into one of several [common misconceptions](https://medium.com/javascript-scene/common-misconceptions-about-inheritance-in-javascript-d5d9bab29b0a). More frequently, the challenge is met with silence.
+
+> *"If a feature is sometimes useful and sometimes dangerous and if there is a better option then **always use the better option**."
+>
+> *~Douglas Crockford*
+
+
+#### Good to hear:
+
+* Rarely, almost never, or never.
+
+* A single level is sometimes OK, from a framework base-class such as ```React.Component```.
+
+* "Favor object composition over class inheritance."
+
+#### Learn More:
+
+* [The Two Pillars of JavaScript Part 1]({{ site.baseurl }}{% link _posts/2019-05-24-post-the-two-pillars-of-javascript.md %}) -- Prototypal OO.
+
+* [JS Objects -- Inherited a Mess](http://davidwalsh.name/javascript-objects)
+
+### **6. When is prototypal inheritance an appropriate choice?**
+
+There is more than one type of prototypal inheritance:
+
+* **Delegation** (i.e., the prototype chain).
+
+* **Concatenative** (i.e., mixins, *'Object.assign()'*).
+
+* **Functional** (Not to be confused with functional programming. A function used to create a closure for private state/encapsulation).
+
+
