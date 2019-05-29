@@ -23,7 +23,6 @@ header:
 At most companies, management must trust the developers to give technical interviews in order to assess candidate skills. If you do well as a candidate, you'll eventually need to interview. Here's how.
 
 ---
-<<<<<<< HEAD
 ### It Starts With People
 
 In ["How to Build a High Velocity Development Team"](https://medium.com/javascript-scene/how-to-build-a-high-velocity-development-team-4b2360d34021), I made a couple points worh repeating:
@@ -76,8 +75,4 @@ JavaScript is a multi-paradigm language, supporting **imperative/procedural** pr
 * No clue what a paradigm is, no mention of prototypal oo or functional programming.
 
 #### Learn More:
-* ["The Two Pillars of JavaScript Part 1]({{ site.baseurl }}{% link _posts/2019-05-24-post-the-two-pillars-of-javascript.md %}) -- Prototypal OO.
 
-* ["The Two Pillars of JavaScript Part 2]({{site.baseurl }}{% link /study/2019-05-24-post-the-two-pillars-of-javascript-part2.md %}) -- Functional Programming. 
-=======
->>>>>>> parent of 2bfdbdb... Update 2019-05-24-post-10-interview-questions-every-javascript-developer.md
