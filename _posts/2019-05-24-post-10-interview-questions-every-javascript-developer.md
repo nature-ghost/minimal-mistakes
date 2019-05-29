@@ -227,4 +227,163 @@ There is more than one type of prototypal inheritance:
 
 * **Functional** (Not to be confused with functional programming. A function used to create a closure for private state/encapsulation).
 
+Each type of prototypal inheritance has its own set of use-cases, but all of them are equally useful in their ability to enable **composition**, which crates **has-a** or **uses-a** or **can-do** relationships as opposed to the **is-a** relationship created with class inheritance.
+
+#### Good to hear:
+
+* In situations where modules or functional programming don't provide an obvious solution.
+
+* When you need to compose objects from multiple sources.
+
+* Any time you need inheritance.
+
+#### Red flags:
+
+* No knowledge of when to use prototypes.
+
+* No awareness of mixins of *\`Object.assign()\`*.
+
+#### Learn More:
+
+* ["Programming JavaScript Applications": Prototypes section.](http://chimera.labs.oreilly.com/books/1234000000262/ch03.html#chcsrdou100015eilvj6l9inj)
+
+
+### **7. What does "favor object composition over class inheritance" mean?
+
+This is a quote from ["Design Pattern: Elements of Reusable Object-Oriented Software"](http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612). It means that code reuse should be achieved by assembling smaller units of functionality into new objects instead of inheriting from classes and creating object taxonomies.
+
+In other words, use **can-do**, **has-a**, or **uses-a** relationships instead of **is-a** relationships.
+
+#### Good to hear:
+
+* Avoid class hierarchies.
+
+* Avoid brittle base class problem.
+
+* Avoid tight coupling.
+
+* Avoid rigid taxonomy (forced is-a relationships that are eventually wrong for new use cases).
+
+* Avoid the gorilla banana problem ("What you wanted was a banana, waht you got was a gorilla holding the banana, and the entire jungle")
+
+* Make code more flexible.
+
+#### Red Flags:
+
+* Fail to mention any of the problems above.
+
+* Fail to articulate the difference between composition and class inheritance, or the advantages of composition.
+
+#### Learn More:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wfMtDGfHWpA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[Introducing the Stamp Specification](https://medium.com/p/77f8911c2fee)
+
+### **8. What are two-way data binding and one-way data flow, and how are they different?**
+
+Two way data binding means that UI fields are bound to model data dynamically such that when a UI field changes, the model data changes with it and vice-versa.
+
+One way data flow means that the model is the single source of truth. Changes in the UI trigger messages that signal user intent to the model (or "store" in React). Only the model has the access to change the app's state. The effect is that data always flows in a single direction, which makes it easier to understand.
+
+One way data flows are deterministic, whereas two-way binding can cause side-effects which are harder to follow and understand.
+
+#### Good to hear:
+
+* React is the new canonical example of one-way data flow, so mentions of React are a good signal. Cycle.js is another popular implementation of unidirectional data flow.
+
+* Angular is a popular framework which uses two-way binding.
+
+#### Red flags:
+
+* No understanding of what either one means. Unable to articulate the difference.
+
+#### Learn more:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XxVg_s8xAms" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### **9. What are the pros and cons of monolithic vs microservice architectures?
+
+A monolithic architecture means that your app is written as one cohesive unit of code whose components are designed to work together, sharing the same memory space and resources.
+
+A microservice architecture means that your app is made up of lots of smaller, independent applications capable of running in their  own memory space and scaling independently from each other across potentially many separate machines.
+
+**Monolithic Pros:** The major advantage of the monolithic architecture is that most apps typically have a large number of cross-curring concerns, such as logging, rate limiting, and security features such audit trails and DOS protection.
+
+When everything is running through the same app, it's easy to hook up components to those cross-cutting concerns.
+
+There can also be performance advantages, since shared-memory access is faster than inter-process communication (IPC).
+
+**Monolithic cons:** Monolithic app services tend to get tightly coupled and entangled as the application evolves, making it difficult to isolate services for purposes such as independent scaling or code maintainability.
+
+Monolithic architectures are also much harder to understand, because there may be dependencies, side-effects, and magic which are not obvious when you're looking at a particular service or controller.
+
+**Microservice pros:** Microservice architectures are typically better organized, since each microservice has a very specific job, and is not concerned with the jobs of other components. Decoupled services are also easier to recompose and reconfigure to serve the purposes of different apps (for example, serving both the web clients and public API).
+
+They can also have performance advantages depending on how they're organized because it's possible to isolate hot services and scale them independent of the rest of the app.
+
+**Microservice cons:** As you're building a new microservice architecture, you're likely to discover lots of cross-cutting concerns that you did not anticipate at design time. A monolithic app could establish shared magic helpers or middleware to handle such cross-cutting concerns without much effort.
+
+In a microservice architecture, you'll either need to incur the overhead of separate modules for each cross-cutting concern, or encapsulate cross-cutting concerns in another service layer that all traffic gets routed through.
+
+Eventually, even monolthic architectures tend to route traffic through an outer service layer for cross-cutting concerns, but with a monolithic architecture, it's possible to delay the cost of that work until the project is much more mature.
+
+Microservice are frequently deployed on their own virtual machines or containers, causing a proliferation of VM wrangling work. These tasks are frequently automated with container fleet management tools.
+
+#### Good to hear:
+
+* Positive attitudes toward microservice, despite the higher initial cost vs monolithic apps. Aware that microservices tend to perform and scale better in the long run.
+
+* Practical about microservices vs monolithic apps. Structure the app so that services are independent from each other at the code level, but easy to bundle together as a monolithic app in the beginning. Microservice overhead costs can be delayed until it becomes more practical to pay the price.
+
+#### Red flags:
+
+* Unaware of the differences between monolithic and microservice architectures.
+
+* Unaware or impractical about the additional overhead caused by IPC and network communication for microservices.
+
+* Too negative about the drawbacks of microservices. Unable to articulate ways in which to decouple monolithic apps such that they're easy to split into microservices when the time comes.
+
+* Underestimates the advantage of independently scalable microservices.
+
+### **10. What is asynchronous programming, and why is it important in JavaScript?**
+
+Synchronous programming means that, barring conditionals and function calls, code is executed sequentially from top-to-bottom, blocking on long-running tasks such as network requests and disk I/O.
+
+Asynchronous programming means that the engine runs in an event loop. When a blocking operation in needed, the request is started, and the code keeps running without blocking for the result. When the response is ready, an interrupt is fired, which causes an event handler to be run, where the control flow continues. In this way, a single program thread can handle many concurrent operations.
+
+User interfaces are asynchronous by nature, and spend most of their time waiting for user input to interrupt the event loop and trigger event handlers.
+
+Node is asynchronous by default, meaning that the server works in much the same way, waiting in a loop for a network request, and accepting more incoming requests while the first one is being handled.
+
+This is important in JavaScript, because it is a very natural fit for user interface code, and very beneficial to performance on the server.
+
+#### Good to hear:
+
+* An understanding of what blocking means, and the performance implications.
+
+* An understanding of event handling, and why its important for UI code.
+
+#### Red flags:
+
+* Unfamiliar with the terms asynchronous or synchronous.
+
+* Unable to articulate performance implications or the relationship between asynchronous code and UI code.
+
+---
+
+### Conclusion
+
+Stick to high-level topics. If they can answer these questions, that typically means that they have enough programming experience to pick up language quirks & syntax in a few weeks, even if they don’t have a lot of JavaScript experience.
+
+Don’t disqualify candidates based on stuff that’s easy to learn (including classic CS-101 algorithms, or any type of puzzle problem).
+
+What you really need to know is, “does this candidate understand how to put an application together?”
+
+That’s it for the spoken interview.
+
+In real interviews, I place a much stronger emphasis on coding challenges and *watching candidates code*. Those topics are covered in depth in my ["Master the JavaScript Interview"](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36) series.
+
+---
+
 
