@@ -76,6 +76,6 @@ JavaScript is a multi-paradigm language, supporting **imperative/procedural** pr
 
 #### Learn More:
 
-* ["The Two Pillars of JavaScript Part 1](/study/post-the-two-pillars-of-javascript-part/) -- Prototypal OO.
+* ["The Two Pillars of JavaScript Part 1]({{ site.baseurl }}{% link _posts/2019-05-24-post-the-two-pillars-of-javascript.md %}) -- Prototypal OO.
 
-* ["The Two Pillars of JavaScript Part 2](/study/post-the-two-pillars-of-javascript-part/) -- Functional Programming. 
+* ["The Two Pillars of JavaScript Part 2]({{ site.baseurl }}{% link study/2019-05-24-post-the-two-pillars-of-javascript-part2.md %}) -- Functional Programming. 
